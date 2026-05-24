@@ -319,7 +319,7 @@ export default function AnimatedDemo() {
             {/* Main Content */}
             <div style={{ padding: '14px 16px', display: 'flex', flexDirection: 'column', gap: '10px', minWidth: 0 }}>
               {/* Diagnostic Screen */}
-              <div ref={(el) => (screenRefs.current['diagnostic'] = el)} className="on" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <div ref={(el) => { screenRefs.current['diagnostic'] = el; }} className="on" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 <h2 style={{ fontFamily: "'Inter', sans-serif", fontSize: '14px', fontWeight: 700, margin: 0, letterSpacing: '-0.1px' }}>Diagnostic</h2>
                 <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '10.5px', color: 'var(--text-3)', margin: 0, lineHeight: 1.4 }}>3 issues found · scan 8.2s</p>
                 <div style={{ background: '#0E0E16', border: '1px solid var(--border)', borderRadius: '6px', padding: '8px', display: 'flex', gap: '8px', fontSize: '10px', fontWeight: 500 }}>
@@ -331,7 +331,7 @@ export default function AnimatedDemo() {
               </div>
 
               {/* Apply Screen */}
-              <div ref={(el) => (screenRefs.current['apply'] = el)} style={{ display: 'none', flexDirection: 'column', gap: '8px' }}>
+              <div ref={(el) => { screenRefs.current['apply'] = el; }} style={{ display: 'none', flexDirection: 'column', gap: '8px' }}>
                 <h2 style={{ fontFamily: "'Inter', sans-serif", fontSize: '14px', fontWeight: 700, margin: 0, letterSpacing: '-0.1px' }}>Apply · Competition Mode</h2>
                 <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '10.5px', color: 'var(--text-3)', margin: 0, lineHeight: 1.4 }}>40 tweaks · ~38s · reversible</p>
                 <div style={{ height: '6px', background: '#1A1A24', borderRadius: '3px', overflow: 'hidden', border: '1px solid var(--border)' }}>
@@ -340,7 +340,7 @@ export default function AnimatedDemo() {
               </div>
 
               {/* Benchmark Screen */}
-              <div ref={(el) => (screenRefs.current['benchmark'] = el)} style={{ display: 'none', flexDirection: 'column', gap: '8px' }}>
+              <div ref={(el) => { screenRefs.current['benchmark'] = el; }} style={{ display: 'none', flexDirection: 'column', gap: '8px' }}>
                 <h2 style={{ fontFamily: "'Inter', sans-serif", fontSize: '14px', fontWeight: 700, margin: 0, letterSpacing: '-0.1px' }}>Benchmark · Run #018</h2>
                 <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '10.5px', color: 'var(--text-3)', margin: 0, lineHeight: 1.4 }}>+23 fps · variance σ 2.1 → 0.4</p>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px' }}>

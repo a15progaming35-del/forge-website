@@ -1,11 +1,12 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
-export default function Welcome() {
+function WelcomeContent() {
   const searchParams = useSearchParams();
   const sessionId = searchParams.get('session_id');
 
@@ -56,5 +57,13 @@ export default function Welcome() {
       </div>
       <Footer />
     </>
+  );
+}
+
+export default function Welcome() {
+  return (
+    <Suspense fallback={<div />}>
+      <WelcomeContent />
+    </Suspense>
   );
 }

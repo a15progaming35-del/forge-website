@@ -29,7 +29,6 @@ export default function Changelog() {
           </p>
 
           <form
-            onSubmit={(e) => { e.preventDefault(); (e.currentTarget.querySelector('button') as HTMLButtonElement).textContent = '✓ Subscribed'; }}
             style={{ maxWidth: '560px', margin: '32px auto 0', padding: '14px 18px', background: 'var(--panel-2)', border: '1px solid var(--border)', borderRadius: '50px', display: 'flex', gap: '12px', alignItems: 'center', justifyContent: 'center', fontFamily: "'JetBrains Mono', monospace", fontSize: '13px', color: 'var(--text-3)', letterSpacing: '0.05em' }}
           >
             <span style={{ color: 'var(--accent)' }}>📬</span>
