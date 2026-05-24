@@ -296,7 +296,7 @@ export default function AnimatedDemo() {
               {['diagnostic', 'apply', 'benchmark'].map((item) => (
                 <div
                   key={item}
-                  ref={(el) => (navItemRefs.current[item] = el)}
+                  ref={(el) => { navItemRefs.current[item] = el; }}
                   style={{
                     padding: '5px 8px',
                     borderRadius: '5px',
