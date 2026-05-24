@@ -3,25 +3,6 @@
   "devCommand": "next dev",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "env": {
-    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": {
-      "description": "Stripe publishable key for payments",
-      "required": true
-    },
-    "STRIPE_SECRET_KEY": {
-      "description": "Stripe secret key for server-side operations",
-      "required": true
-    },
-    "NEXT_PUBLIC_STRIPE_PRICE_ID": {
-      "description": "Stripe price ID for $11/mo subscription",
-      "required": true
-    },
-    "NEXT_PUBLIC_BASE_URL": {
-      "description": "Base URL of your deployed site",
-      "required": true,
-      "default": "https://forge.app"
-    }
-  },
   "headers": [
     {
       "source": "/(.*).(js|css|jpg|jpeg|png|gif|ico|svg|webp)",
