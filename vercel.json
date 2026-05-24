@@ -1,0 +1,57 @@
+{
+  "buildCommand": "next build",
+  "devCommand": "next dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "env": {
+    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": {
+      "description": "Stripe publishable key for payments",
+      "required": true
+    },
+    "STRIPE_SECRET_KEY": {
+      "description": "Stripe secret key for server-side operations",
+      "required": true
+    },
+    "NEXT_PUBLIC_STRIPE_PRICE_ID": {
+      "description": "Stripe price ID for $11/mo subscription",
+      "required": true
+    },
+    "NEXT_PUBLIC_BASE_URL": {
+      "description": "Base URL of your deployed site",
+      "required": true,
+      "default": "https://forge.app"
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*).(js|css|jpg|jpeg|png|gif|ico|svg|webp)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/docs",
+      "destination": "#",
+      "permanent": false
+    },
+    {
+      "source": "/support",
+      "destination": "mailto:support@forge.app",
+      "permanent": false
+    }
+  ]
+}
