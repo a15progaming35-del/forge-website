@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /welcome
+
+Sitemap: https://forge.app/sitemap.xml
